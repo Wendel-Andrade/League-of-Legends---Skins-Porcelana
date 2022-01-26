@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alegreya+SC:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="league.css">
+    <title>League of Legends - Novas Skins Porcelana</title>
+</head>
+    <body>
+
+        <!-- SESSÃO DE NAVEGAÇÃO -->
+
+        <section>
+            <header>
+                <a href="#" class="logo" >Heroes</a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="nav">
+                    <li><a href="#" style="--i:1;">Inicio</a></li>
+                    <li><a href="#" style="--i:2;">Personagens</a></li>
+                    <li><a href="#" style="--i:3;">Wiki</a></li>
+                    <li><a href="#" style="--i:4;">Skins</a></li>
+                    <li><a href="#" style="--i:5;">Mais</a></li>
+                </ul>
+            </header>
+
+            <!-- CONTÉUDO PRINCIPAL - IMAGENS -->
+
+            <div class="container">
+                <div class="box" style="--i:3;">
+                    <div class="imgBx">
+                        <img src="ez.jpg" alt="Ezreal Porcelana">
+                    </div>
+                </div>
+                <div class="box" style="--i:4;">
+                    <div class="imgBx">
+                        <img src="amumu.jpg" alt="Amumu Porcelana">
+                    </div>
+                </div>
+                <div class="box" style="--i:5;">
+                    <div class="imgBx">
+                        <img src="lissandra.jpg" alt="Lissandra Porcelana">
+                    </div>
+                </div>
+                <div class="box" style="--i:6;">
+                    <div class="imgBx">
+                        <img src="kindred.jpg" alt="Kindred Porcelana">
+                    </div>
+                </div>
+            </div>
+
+                <!-- RODAPÉ -->
+
+            <div class="footer">
+                <ul class="sci">
+                    <li><a href="#" style="--i:9;">Facebook</a></li>
+                    <li><a href="#" style="--i:8;">Twitter</a></li>
+                    <li><a href="#" style="--i:7;">Instagram</a></li>
+                </ul>
+                <p class="copyrightText">Wendel Entertainment©<span id="year"></span></p>
+            </div>
+        </section>
+
+        <!-- SESSÃO JAVASCRIPT -->
+
+            <script>
+
+                let imgBx = document.querySelectorAll('.imgBx');
+                imgBx.forEach(popup => popup.addEventListener('click', () =>{
+                popup.classList.toggle('active');
+                }))
+
+                function toggleMenu(){
+                    const menuToggle = document.querySelector('.toggle');
+                    const nav = document.querySelector('.nav');
+                    menuToggle.classList.toggle('active');
+                    nav.classList.toggle('active');
+                }
+                const year = document.getElementById('year');
+                const actualYear = new Date();
+                year.innerHTML = actualYear.getFullYear();
+            </script>
+    </body>
+</html>
